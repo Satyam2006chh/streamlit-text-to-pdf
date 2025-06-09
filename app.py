@@ -5,7 +5,7 @@ st.title("Text-to-PDF Converter")
 
 user_text = st.text_area("Enter Your Text Here: ",height=340)
 if st.button("Convert To PDF"):
-    if user_text.strip() ==" ":
+    if user_text.strip() =="":
         st.warning("Please Enter some Text First !!")
     else:
         pdf =FPDF()
