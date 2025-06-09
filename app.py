@@ -15,5 +15,7 @@ if st.button("Convert To PDF"):
             safe_line = ''.join(c for c in line if ord(c) < 128)
             pdf.multi_cell(0, 10, safe_line)
         pdf.output("generated.pdf")
+        with open("generated.pdf","rb") as f:
+            st.download_button("Download PDF:",f,file_name="converted.pdf")
 
 
